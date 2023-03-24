@@ -1,0 +1,265 @@
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+
+body {
+    font-family: "agenda", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  margin: 0;
+}
+
+h2 {
+   /* Agenda Semibold */
+   font-family: "agenda", sans-serif;
+   font-weight: 600;
+   font-style: normal;
+
+   padding:0;
+}
+
+.content .post  {
+  display:block;
+  margin-top:138px 
+
+}
+
+.content .post img {
+  margin:0 30px 256px 0;
+}
+
+
+/* -----side navigation-------- */
+.sidenav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.sidenav .logo {
+  padding:20px;
+  
+  margin:-2px;
+} 
+
+.sidenav .logoTwo{
+  padding:20px;
+  margin:3px;
+  
+}
+/* vertical line  */
+.sidenav .vl {
+  border-left: 1px solid black;
+  height: 35px;
+  position: absolute;
+  left: 50%;
+  margin-left: -25px;
+  top: 18px;
+}
+
+.sidenav {
+
+    align-self: center;
+    height: 100%;
+    width: 320px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(174, 29, 87, 0.05);
+    overflow-x: hidden;
+    display: inline-block;
+    
+    
+  }
+  
+  
+  .sidenav-item {
+   
+    --c: rgba(174, 29, 87, 0.1); /* the color */
+     padding-left: 20px;
+    padding-right: 20px;
+    
+    background: 
+    
+      linear-gradient(90deg,#fff 50%,var(--c) 0) calc(100% - var(--_p,0%))/200% 100%,
+      linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) 100% no-repeat;
+    -webkit-background-clip: text,content-box;
+    background-clip: text,content-box;    
+    
+        
+    transition: 0.5s; 
+  } 
+
+  .sidenav-item:hover {
+    --_p: 100%
+
+  }
+
+
+  .sidenav a {
+    
+    padding-top:18.5px ;
+    padding-bottom: 12.5px;
+    padding-left: 16px;
+    /* padding: 6px 8px 6px 16px; */
+    text-decoration: none;
+    font-size: 16px;
+    color: #000000;
+    display: block;
+
+    /* Agenda Semibold */
+    font-family: "agenda", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .sidenav a:hover {
+    color:#AE1D57;
+    background-color:rgba(174, 29, 87, 0.1);
+    border-radius: 8px ;
+  }
+
+  
+
+  .sidenav p {
+    padding: 20px; 
+    font-size: 16px;
+   display: inline-block; 
+   position: absolute;
+   bottom: 0;
+   
+  }
+
+  .sidenav #pinkText  {
+    color: #AE1D57;
+    position: absolute;
+   bottom: 0;
+   padding-left: 244px;
+   text-decoration: underline;
+   font-weight: bold;
+
+  }
+
+
+
+
+  /* -------- main body text ---------  */
+  .main {
+    margin-left: 320px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 40px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+
+/* ------ Header navy banner style ----- */
+.headerBanner {
+    margin-left: 320px; /* Same as the width of the sidenav */
+    padding-top: 0px;
+    margin-top: 0%;
+    padding: 5px;
+    top: 0;
+    text-align: left;
+    background: rgba(1, 7, 58, 1);
+    color: white;
+    font-size: 10px;
+    z-index:-1;
+  }
+
+
+
+/* ------- Horzontal navigation menue style --------  */
+  .topnav {
+    overflow: hidden;
+    top:0 ;
+  }
+
+  .topnav a {
+    color: rgba(0, 0, 0, 1);
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    padding: 0px 24px 0px 0px ; /*between words */
+    padding-bottom: 16px;
+    position: relative;
+  }
+
+  .topnav a:hover {
+    color: #AE1D57;
+    font-size: 18px;
+    text-align: center;
+    padding-left: 20px;
+    transition: all .2s ease-in-out;
+  
+  } 
+  /* gray line under horizontal nav  */
+  .topnav hr {
+    margin-top: 0px;
+    color: rgba(204, 205, 216, 3);
+  }
+
+  /* Horizontal navigation underline  */
+  .topnav a:after { 
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    height: 3px; /* line thickness */
+    left: 5%;
+    position: absolute;
+    background: #AE1D57;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+
+  .topnav a:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+  
+  
+
+  /* search bar  */
+  .search {
+    width: 100%;
+    position: relative;
+    display: flex;
+  }
+  
+  .searchTerm {
+    width: 100%;
+    border: 1px solid rgba(204, 205, 216, 1);
+    border-right: none;
+    padding: 8px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+  }
+  
+  .searchTerm:focus{
+    color:rgba(204, 205, 216, 1);
+  }
+  
+  .searchButton {
+    width: 40px;
+    height: 39px;
+    border: 1px rgba(204, 205, 216, 1);
+    background: rgba(174, 29, 87, 1);
+    text-align: center;
+    color: #fff;
+    border-radius: 0 15px 15px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  /*Resize the wrap to see the search bar change!*/
+  .wrap{
+    padding-top: 20px;
+    width: 100%;
+   
+
+  }
